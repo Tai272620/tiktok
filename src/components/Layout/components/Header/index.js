@@ -10,9 +10,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}>
-                    <img src={images.logo} alt="Tiktok" />
-                </div>
+                <img src={images.logo} alt="Tiktok" />
                 <div className={cx('search')}>
                     <input placeholder="Search account and videos" spellCheck={false}></input>
                     <button className={cx('clear')}>
@@ -23,9 +21,7 @@ function Header() {
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </button>
                 </div>
-                <div className={cx('actions')}>
-
-                </div>
+                <div className={cx('actions')}></div>
             </div>
         </header>
     );
