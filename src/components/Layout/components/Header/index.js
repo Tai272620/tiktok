@@ -26,6 +26,8 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
+import { UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -141,7 +143,7 @@ function Header() {
                         <>
                             <Tippy delay={[0, 200]} content="Upload video" placement='bottom'>
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -154,7 +156,7 @@ function Header() {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/c0157d7625d2568337191152d784c9b3.jpeg?x-expires=1675713600&x-signature=%2Ff3UGj7LepZCFaY%2Ft04yY3rUuCI%3D"
                                 alt="Nguyen Van A"
@@ -164,7 +166,6 @@ function Header() {
                                 <FontAwesomeIcon icon={faEllipsisVertical} />
                             </button>
                         )}
-
                     </Menu>
                 </div>
             </div>
